@@ -15,48 +15,63 @@
   </head>
   <body>
     <div id="app-container">
-        
-        <header>
+      <header>
         <h2>Invoice Creator</h2>
         <p>Thanks for choosing GoodCorp, LLC!</p>
-        </header>
+      </header>
 
-        <main>
-        <section id="add-btns">
-            <button>Wash Car: $10</button>
-            <button>Mow Lawn: $20</button>
-            <button>Pull Weeds: $30</button>
+      <main>
+        <section id="add-btns-container">
+          <button id="add-car-btn">Wash Car: $10</button>
+          <button id="add-lawn-btn">Mow Lawn: $20</button>
+          <button id="add-weeds-btn">Pull Weeds: $30</button>
         </section>
 
         <section id="task-section-container">
-            <div class="section-header">
+          <div id="task-section-header">
             <h3>TASK</h3>
             <h3>TOTAL</h3>
-            </div>
-            <ul id="task-list">
-                <li>Task Name <span class="remove-item">Remove<span class="item-total">$10</span></li>
-                <li>Task Name <span class="remove-item">Remove<span class="item-total">$10</span></li>
-                <li>Task Name <span class="remove-item">Remove<span class="item-total">$10</span></li>
-            </ul>
+          </div>
+          <ul id="task-list">
+            <li class="task">
+              <span class="task-name"
+                >Task Name
+                <span class="remove-task">Remove</span>
+              </span>
+              <span class="task-cost">$10</span>
+            </li>
+            <li class="task">
+                <span class="task-name"
+                  >Task Name
+                  <span class="remove-task">Remove</span>
+                </span>
+                <span class="task-cost">$10</span>
+              </li>
+              <li class="task">
+                <span class="task-name"
+                  >Task Name
+                  <span class="remove-task">Remove</span>
+                </span>
+                <span class="task-cost">$10</span>
+              </li>
+          </ul>
         </section>
 
         <section id="summary-section-container">
-            <div id="notes">
-                <h3>NOTES</h3>
-                <p>We accept cash, credit card, or PayPal</p>
-            </div>
-            <div id="total-amount">
-                <h3>TOTAL AMOUNT</h3>
-                <p>$30</p>
-            </div>
+          <div id="notes">
+            <h3>NOTES</h3>
+            <p>We accept cash, credit card, or PayPal</p>
+          </div>
+          <div id="total-amount">
+            <h3>TOTAL AMOUNT</h3>
+            <p>$30</p>
+          </div>
         </section>
+      </main>
 
-        </main>
-
-        <footer>
+      <footer>
         <button id="send-invoice-btn">Send Invoice</button>
-        </footer>
-
+      </footer>
     </div>
   </body>
 </html>
