@@ -37,3 +37,35 @@ header p {
   line-height: 28px;
   letter-spacing: 0.5px;
 }
+
+main,
+footer {
+  background: #1f2937;
+  color: #f5f5f5;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+main {
+  padding-top: 40px;
+}
+
+#add-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+#add-btns button {
+  font-size: 14px;
+  font-weight: 500;
+  height: 45px;
+  color: #4a4e74;
+  background: #d1d4f4;
+  padding: 0 18px;
+  border: none;
+  border-radius: 7px;
+}
+
+footer {
+  padding-bottom: 50px;
+}
