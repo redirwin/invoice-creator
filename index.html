@@ -13,5 +13,38 @@
     />
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2>Invoice Creator</h2>
+      <p>Thanks for choosing GoodCorp, LLC!</p>
+    </header>
+
+    <main>
+      <section id="add-btns">
+        <button>Wash Car: $10</button>
+        <button>Mow Lawn: $20</button>
+        <button>Pull Weeds: $30</button>
+      </section>
+
+      <section id="task-section-container">
+        <div class="section-header">
+          <h3>TASK</h3>
+          <h3>TOTAL</h3>
+        </div>
+        <div id="task-list"></div>
+      </section>
+
+      <section id="summary-section-container">
+        <div class="section-header">
+          <h3>NOTES</h3>
+          <h3>TOTAL AMOUNT</h3>
+        </div>
+        <div id="summary"></div>
+      </section>
+    </main>
+
+    <footer>
+      <button id="send-invoice-btn">Send Invoice</button>
+    </footer>
+  </body>
 </html>
