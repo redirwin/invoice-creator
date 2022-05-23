@@ -13,6 +13,7 @@ body {
   background: #e5e5e5;
   margin: 50px auto;
   width: 550px;
+  box-shadow: 0px 0px 1px white;
 }
 
 header {
@@ -77,33 +78,81 @@ main {
 }
 
 #task-list {
-    list-style: none;
-    margin-top: 19px;
-    border-bottom: 1px solid #C3C6DB;
+  list-style: none;
+  margin-top: 19px;
+  border-bottom: 1px solid #c3c6db;
 }
 
 .task {
-    font-size: 20px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .task-name {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .remove-task {
-    margin-left: 15px;
-    font-size: 8px;
-    font-weight: 400;
-    /* display: none; */
+  margin-left: 15px;
+  font-size: 8px;
+  font-weight: 400;
+  /* display: none; */
 }
 
+#summary-section-container {
+  margin-top: 11px;
+  display: flex;
+  justify-content: space-between;
+}
 
+#summary-section-container h3 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+#notes p {
+  font-size: 12px;
+}
+
+#total-amount-container {
+  text-align: right;
+}
+
+#total-amount {
+  margin-top: 11px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: right;
+}
 
 footer {
+  padding-top: 50px;
   padding-bottom: 50px;
+}
+
+#send-invoice-btn {
+  height: 44px;
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  background-color: #3a69d2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#button-icon {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url(images/mail-icon.png);
+  background-size: cover;
+  margin-right: 14px;
 }

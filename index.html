@@ -41,19 +41,12 @@
               <span class="task-cost">$10</span>
             </li>
             <li class="task">
-                <span class="task-name"
-                  >Task Name
-                  <span class="remove-task">Remove</span>
-                </span>
-                <span class="task-cost">$10</span>
-              </li>
-              <li class="task">
-                <span class="task-name"
-                  >Task Name
-                  <span class="remove-task">Remove</span>
-                </span>
-                <span class="task-cost">$10</span>
-              </li>
+              <span class="task-name"
+                >Task Name
+                <span class="remove-task">Remove</span>
+              </span>
+              <span class="task-cost">$10</span>
+            </li>
           </ul>
         </section>
 
@@ -62,15 +55,17 @@
             <h3>NOTES</h3>
             <p>We accept cash, credit card, or PayPal</p>
           </div>
-          <div id="total-amount">
+          <div id="total-amount-container">
             <h3>TOTAL AMOUNT</h3>
-            <p>$30</p>
+            <p id="total-amount">$30</p>
           </div>
         </section>
       </main>
 
       <footer>
-        <button id="send-invoice-btn">Send Invoice</button>
+        <button id="send-invoice-btn">
+          <span id="button-icon"></span>Send Invoice
+        </button>
       </footer>
     </div>
   </body>
