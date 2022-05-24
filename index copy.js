@@ -10,6 +10,7 @@ let carWashSelected = false;
 let mowLawnSelected = false;
 let pullWeedsSelected = false;
 
+
 renderTaskList();
 
 addCarBtn.addEventListener("click", function () {
@@ -72,3 +73,5 @@ sendInvoiceBtn.addEventListener("click", function () {
   mowLawnSelected = false;
   pullWeedsSelected = false;
 });
+
+

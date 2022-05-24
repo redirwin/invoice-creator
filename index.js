@@ -15,6 +15,7 @@ addCarBtn.addEventListener("click", function () {
     servicesRequested.push({ name: "Wash Car", cost: 10, id: "carWashEl" });
     totalCost += 10;
     carWashAlreadyAdded = true;
+    carWashEl = document.querySelector("#carWashEl");
   }
   renderTaskList();
 });
@@ -50,5 +51,16 @@ function renderTaskList() {
         </li>
         `;
   }
+
   totalAmountEl.textContent = "$" + totalCost;
 }
+
+sendInvoiceBtn.addEventListener("click", function () {
+  servicesRequested = [];
+  taskList.innerHTML = "";
+  totalCost = 0;
+  totalAmountEl.innerHTML = "$0";
+  carWashAlreadyAdded = false;
+  mowLawnAlreadyAdded = false;
+  pullWeedsAlreadyAdded = false;
+});
