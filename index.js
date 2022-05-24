@@ -66,7 +66,6 @@ sendInvoiceBtn.addEventListener("click", function () {
   pullWeedsAlreadyAdded = false;
 });
 
-
 // This function adds event listeners for remove element when new items are added to the list.
 function createRemoveFeature() {
   for (let i = 0; i < servicesRequested.length; i++) {
