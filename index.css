@@ -100,7 +100,7 @@ main {
   margin-left: 15px;
   font-size: 8px;
   font-weight: 400;
-  display: none;
+  /* display: none; */
 }
 
 #summary-section-container {
@@ -155,4 +155,8 @@ footer {
   background: url(images/mail-icon.png);
   background-size: cover;
   margin-right: 14px;
+}
+
+button:hover, .remove-task:hover {
+    cursor: pointer;
 }

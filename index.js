@@ -1,5 +1,4 @@
 let servicesRequested = [];
-
 const taskList = document.querySelector("#task-list");
 const addCarBtn = document.querySelector("#add-car-btn");
 const addLawnBtn = document.querySelector("#add-lawn-btn");
@@ -18,13 +17,13 @@ addCarBtn.addEventListener("click", function () {
     return;
   }
   carWashSelected = true;
-  servicesRequested.push({ name: "Wash Car", cost: 10 });
+  servicesRequested.push({ name: "Wash Car", cost: 10, id: "washCar" });
   totalCost += 10;
   renderTaskList();
 });
 
 addLawnBtn.addEventListener("click", function () {
-  servicesRequested.push({ name: "Mow Lawn", cost: 20 });
+  servicesRequested.push({ name: "Mow Lawn", cost: 20, id: "mowLawn" });
   if (mowLawnSelected) {
     return;
   }
@@ -34,7 +33,7 @@ addLawnBtn.addEventListener("click", function () {
 });
 
 addWeedsBtn.addEventListener("click", function () {
-  servicesRequested.push({ name: "Pull Weeds", cost: 30 });
+  servicesRequested.push({ name: "Pull Weeds", cost: 30, id: "pullWeeds" });
   if (pullWeedsSelected) {
     return;
   }
@@ -52,12 +51,14 @@ function renderTaskList() {
         <li class="task">
             <span class="task-name"
             >${servicesRequested[i].name}
-            <span class="remove-task">Remove</span>
+            <span class="remove-task" id="${servicesRequested[i].id}El">Remove</span>
             </span>
             <span class="task-cost">$${servicesRequested[i].cost}</span>
         </li>
         `;
   }
+
+  console.log(taskList.innerHTML);
 
   totalAmountEl.innerHTML = `$${totalCost}`;
 }
@@ -71,3 +72,15 @@ sendInvoiceBtn.addEventListener("click", function () {
   mowLawnSelected = false;
   pullWeedsSelected = false;
 });
+
+function removeService() {
+  console.log("In removeService function.");
+
+  //   console.log(servicesRequested);
+  //   for (let i = 0; i < servicesRequested.length; i++) {
+  //     if (servicesRequested[i].name === service) {
+  //       servicesRequested.splice(i, 1);
+  //     }
+  //   }
+  //   console.log(servicesRequested);
+}
