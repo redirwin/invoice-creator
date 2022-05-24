@@ -9,6 +9,7 @@ let totalCost = 0;
 let carWashAlreadyAdded = false;
 let mowLawnAlreadyAdded = false;
 let pullWeedsAlreadyAdded = false;
+let removeItem = "";
 
 addCarBtn.addEventListener("click", function () {
   if (!carWashAlreadyAdded) {
@@ -51,8 +52,8 @@ function renderTaskList() {
         </li>
         `;
   }
-
   totalAmountEl.textContent = "$" + totalCost;
+  createRemoveFeature();
 }
 
 sendInvoiceBtn.addEventListener("click", function () {
@@ -64,3 +65,41 @@ sendInvoiceBtn.addEventListener("click", function () {
   mowLawnAlreadyAdded = false;
   pullWeedsAlreadyAdded = false;
 });
+
+
+// This function adds event listeners for remove element when new items are added to the list.
+function createRemoveFeature() {
+  for (let i = 0; i < servicesRequested.length; i++) {
+    if (servicesRequested[i].name === "Wash Car") {
+      removeItem = document.querySelector("#carWashEl");
+      removeItem.addEventListener("click", function () {
+        totalCost -= 10;
+        carWashAlreadyAdded = false;
+        removeTask("Wash Car");
+      });
+    } else if (servicesRequested[i].name === "Mow Lawn") {
+      removeItem = document.querySelector("#mowLawnEl");
+      removeItem.addEventListener("click", function () {
+        totalCost -= 20;
+        mowLawnAlreadyAdded = false;
+        removeTask("Mow Lawn");
+      });
+    } else if (servicesRequested[i].name === "Pull Weeds") {
+      removeItem = document.querySelector("#pullWeedsEl");
+      removeItem.addEventListener("click", function () {
+        totalCost -= 30;
+        pullWeedsAlreadyAdded = false;
+        removeTask("Pull Weeds");
+      });
+    }
+  }
+}
+
+function removeTask(taskName) {
+  for (let i = 0; i < servicesRequested.length; i++) {
+    if (servicesRequested[i].name === taskName) {
+      servicesRequested.splice(i, 1);
+    }
+  }
+  renderTaskList();
+}

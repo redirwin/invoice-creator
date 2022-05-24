@@ -10,7 +10,6 @@ let carWashSelected = false;
 let mowLawnSelected = false;
 let pullWeedsSelected = false;
 
-
 renderTaskList();
 
 addCarBtn.addEventListener("click", function () {
@@ -74,4 +73,14 @@ sendInvoiceBtn.addEventListener("click", function () {
   pullWeedsSelected = false;
 });
 
+function removeService() {
+  console.log("In removeService function.");
 
+  //   console.log(servicesRequested);
+  //   for (let i = 0; i < servicesRequested.length; i++) {
+  //     if (servicesRequested[i].name === service) {
+  //       servicesRequested.splice(i, 1);
+  //     }
+  //   }
+  //   console.log(servicesRequested);
+}
