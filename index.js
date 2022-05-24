@@ -1,32 +1,52 @@
-let servicesRequested = [
-  {
-    name: "Wash Car",
-    cost: 10,
-  },
-  {
-    name: "Mow Lawn",
-    cost: 20,
-  },
-  {
-    name: "Pull Weeds",
-    cost: 30,
-  },
-];
+let servicesRequested = [];
 
 const taskList = document.querySelector("#task-list");
 const addCarBtn = document.querySelector("#add-car-btn");
 const addLawnBtn = document.querySelector("#add-lawn-btn");
 const addWeedsBtn = document.querySelector("#add-weeds-btn");
 const totalAmountEl = document.querySelector("#total-amount-el");
+const sendInvoiceBtn = document.querySelector("#send-invoice-btn");
 let totalCost = 0;
+let carWashSelected = false;
+let mowLawnSelected = false;
+let pullWeedsSelected = false;
 
 renderTaskList();
 
-console.log(totalAmountEl.innerHTML);
+addCarBtn.addEventListener("click", function () {
+  if (carWashSelected) {
+    return;
+  }
+  carWashSelected = true;
+  servicesRequested.push({ name: "Wash Car", cost: 10 });
+  totalCost += 10;
+  renderTaskList();
+});
+
+addLawnBtn.addEventListener("click", function () {
+  servicesRequested.push({ name: "Mow Lawn", cost: 20 });
+  if (mowLawnSelected) {
+    return;
+  }
+  mowLawnSelected = true;
+  totalCost += 20;
+  renderTaskList();
+});
+
+addWeedsBtn.addEventListener("click", function () {
+  servicesRequested.push({ name: "Pull Weeds", cost: 30 });
+  if (pullWeedsSelected) {
+    return;
+  }
+  pullWeedsSelected = true;
+  totalCost += 30;
+  renderTaskList();
+});
 
 function renderTaskList() {
+  taskList.innerHTML = "";
   for (let i = 0; i < servicesRequested.length; i++) {
-    totalCost += servicesRequested[i].cost;
+    // totalCost += servicesRequested[i].cost;
 
     taskList.innerHTML += `
         <li class="task">
@@ -39,5 +59,15 @@ function renderTaskList() {
         `;
   }
 
-    totalAmountEl.innerHTML = `$${totalCost}`
+  totalAmountEl.innerHTML = `$${totalCost}`;
 }
+
+sendInvoiceBtn.addEventListener("click", function () {
+  servicesRequested = [];
+  taskList.innerHTML = "";
+  totalCost = 0;
+  totalAmountEl.innerHTML = "$0";
+  carWashSelected = false;
+  mowLawnSelected = false;
+  pullWeedsSelected = false;
+});

@@ -100,7 +100,7 @@ main {
   margin-left: 15px;
   font-size: 8px;
   font-weight: 400;
-  /* display: none; */
+  display: none;
 }
 
 #summary-section-container {
