@@ -1,4 +1,4 @@
-# Invoice creator
+# Invoice Creator
 
 This project was completed as one of multiple challenges in the Front-End Developer Career Path at [Skrimba](https://scrimba.com/about). The final MVP, while not practical for actual business use in its current form, demonstrates important principles and skills. I created the entire project from scratch from a provided [Figma design file](https://www.figma.com/file/roUn8DT7zHTI9tcL2JXNZG/Invoice-Generator?node-id=0%3A1) (_or see Figma.pdf above_).
 
