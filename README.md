@@ -2,7 +2,7 @@
 
 This project was completed as one of multiple challenges in the Front-End Developer Career Path at [Skrimba](https://scrimba.com/about). The final MVP, while not practical for actual business use in its current form, demonstrates important principles and skills. I created the entire project from scratch from a provided [Figma design file](https://www.figma.com/file/roUn8DT7zHTI9tcL2JXNZG/Invoice-Generator?node-id=0%3A1) (or see Figma.pdf above).
 
-The live application can be [found here](https://redirwin.github.io/invoice-creator).
+**The live application can be _[found here](https://redirwin.github.io/invoice-creator)_.**
 
 ## MVP Requirements
 
