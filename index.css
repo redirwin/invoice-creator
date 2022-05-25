@@ -157,6 +157,35 @@ footer {
   margin-right: 14px;
 }
 
-button:hover, .remove-task:hover {
-    cursor: pointer;
+button:hover,
+.remove-task:hover {
+  cursor: pointer;
+}
+
+#about {
+  display: flex;
+  justify-content: end;
+  height: 0;
+}
+
+#about a {
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  background: #273549;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  top: -20px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about a:hover {
+  background: #3a69d2;
+  transition-duration: 0.25s;
 }
